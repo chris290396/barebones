@@ -18,20 +18,46 @@
         <![endif]-->
     </head>
     <body <?php body_class(); ?>>
-        <header class="header" role="banner">
-            <div class="container">
-                <a href="<?php echo get_bloginfo( 'url' ); ?>" class="header__logo">
-                    <?php echo is_front_page() ? '<h1>' : ''; ?>
-                        <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" onerror="this.src='<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.png'" alt="<?php echo get_bloginfo( 'title' ); ?>" />
-                    <?php echo is_front_page() ? '</h1>' : ''; ?>
-                </a>
-                <a href="#" class="nav-burger js-menu-toggle">
-                    <span class="nav-burger__line"></span>
-                    <span class="nav-burger__line"></span>
-                    <span class="nav-burger__line"></span>
-                </a>
-                <nav role="navigation" class="header__navigation">
-                    <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header']); ?>
-                </nav>
-            </div>
-        </header>
+
+        <?php if(is_front_page()) { ?>
+
+        <div class="hero__bgimage">
+            <header class="header" role="banner">
+                <div class="container">
+                    <a href="<?php echo get_bloginfo( 'url' ); ?>" class="header__logo col col--xs-6 col--sm-6 col--md-6 col--lg-6">
+                        <?php echo is_front_page() ? '<h1>' : ''; ?>
+                            <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" onerror="this.src='<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.png'" alt="<?php echo get_bloginfo( 'title' ); ?>" />
+                        <?php echo is_front_page() ? '</h1>' : ''; ?>
+                    </a>
+                    <a href="#" class="nav-burger js-menu-toggle">
+                        <span class="nav-burger__line"></span>
+                        <span class="nav-burger__line"></span>
+                        <span class="nav-burger__line"></span>
+                    </a>
+                    <nav role="navigation" class="header__navigation col col--xs-6 col--sm-6 col--md-6 col--lg-6 alignright">
+                        <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header alignright']); ?>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <?php } else { ?>
+
+            <header class="header header-simple" role="banner">
+                <div class="container">
+                    <a href="<?php echo get_bloginfo( 'url' ); ?>" class="header__logo col col--xs-6 col--sm-6 col--md-6 col--lg-6">
+                        <?php echo is_front_page() ? '<h1>' : ''; ?>
+                            <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" onerror="this.src='<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.png'" alt="<?php echo get_bloginfo( 'title' ); ?>" />
+                        <?php echo is_front_page() ? '</h1>' : ''; ?>
+                    </a>
+                    <a href="#" class="nav-burger js-menu-toggle">
+                        <span class="nav-burger__line"></span>
+                        <span class="nav-burger__line"></span>
+                        <span class="nav-burger__line"></span>
+                    </a>
+                    <nav role="navigation" class="header__navigation col col--xs-6 col--sm-6 col--md-6 col--lg-6 alignright">
+                        <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header alignright']); ?>
+                    </nav>
+                </div>
+            </header>
+
+        <?php } ?>

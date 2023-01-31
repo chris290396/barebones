@@ -1,1 +1,23 @@
+.hero__bgimage {
 
+    background-image: url("../../img/bruuns-kropsterapi-hero-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 75vh;
+
+    .header {
+        padding: 12px 12px 12px 0;
+        .header__logo {
+            width: 260px;
+        }
+    } 
+}
+
+.header-simple {
+    background: #F5F5F5;
+    padding: 12px 12px 12px 0;
+
+    .header__logo {
+        width: 260px;
+    }
+}
