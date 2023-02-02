@@ -6,9 +6,63 @@
     min-height: 75vh;
 
     .header {
-        padding: 12px 12px 12px 0;
+        padding: 24px 12px 12px 0;
         .header__logo {
             width: 260px;
+            padding-left: 0; //default 24px from .col
+        }
+
+        li {list-style: none;}
+
+        .header__navigation {
+            margin-top: 21px;
+            display: flex;
+            align-content: flex-end;
+
+            li {
+                a {
+                    color: #fff;
+                    font-weight: 600;
+                    margin: 24px 12px;
+                }
+            }
+
+            .cta {
+                display: flex;
+
+                @include resp-max($breakpoint-md) {
+                    display: none;
+                }
+                
+                a {
+                    border-radius: 200px;
+                    padding: 8px 24px;
+                    margin: 0 6px;
+                }
+
+                /* Buy giftcard cta */
+                &--giftcard {
+                    background: #F5F5F5;
+                    color: $primary-colour;
+                }
+                /* Book appointment cta */
+                &--book {
+                    background: $primary-colour;
+                    color: #F5F5F5;
+                }
+                
+            }
+        }
+
+        .nav-burger {
+            background: $primary-colour;
+            border-radius: 100%;
+            padding: 12px 16px;
+            margin: 24px;
+
+            span {
+                background: #F5F5F5;
+            }
         }
     } 
 }
@@ -19,5 +73,9 @@
 
     .header__logo {
         width: 260px;
+    }
+
+    .header__navigation li {
+        list-style: none;
     }
 }

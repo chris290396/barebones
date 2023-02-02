@@ -35,7 +35,12 @@
                         <span class="nav-burger__line"></span>
                     </a>
                     <nav role="navigation" class="header__navigation col col--xs-6 col--sm-6 col--md-6 col--lg-6 alignright">
-                        <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header alignright']); ?>
+                        <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header']); ?>
+
+                        <ul class="cta">
+                            <li><a class="cta--giftcard" href="#" title="Køb gavekort">Køb gavekort</a></li>
+                            <li><a class="cta--book"href="#" title="Book tid">Book tid</a></li>
+                        </ul>
                     </nav>
                 </div>
             </header>

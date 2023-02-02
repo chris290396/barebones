@@ -1,9 +1,6 @@
 .footer {
     color: #fff;
-
-    .container {
-        background: #3C3C3C;
-    }
+    background: #3C3C3C;
 
     a {
         color: #fff;
@@ -13,9 +10,35 @@
         margin-left: 0;
     }
 
-    .footer__copyright {
-        text-align: center;
+    &__companyinfo {
+        padding: 40px 0;
+        border-right: 1px solid #525252;
+
+        img {
+            width: 240px;
+            margin: 0 0 24px -10px;
+        }
+
+        a[href^="mailto:"] {
+            margin-top: 12px;
+            display: block;
+        }
+    }
+
+    &__navigation {
+        border-right: 1px solid #525252;
+        padding: 40px 24px;
+    }
+
+    &__reviews {
+        padding: 40px 24px;
+    }
+
+    &__copyright {
+        background: #fff;
         color: #3C3C3C;
+
+        text-align: center;
         padding-top: 24px;
     }
 }

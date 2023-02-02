@@ -8,6 +8,11 @@
     right: $base-spacing-unit;
     z-index: 550;
     transition: all $animation-speed $animation;
+    display: none;
+    
+    @include resp-max($breakpoint-md) {
+        display: block;
+    }
 }
 
 .nav-burger__line {
