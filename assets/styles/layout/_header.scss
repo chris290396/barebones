@@ -6,7 +6,7 @@
     min-height: 75vh;
 
     .header {
-        padding: 24px 12px 12px 0;
+        padding: 24px 38px 24px 48px;
         .header__logo {
             width: 260px;
             padding-left: 0; //default 24px from .col
@@ -23,7 +23,6 @@
                 a {
                     color: #fff;
                     font-weight: 600;
-                    margin: 24px 12px;
                 }
             }
 
@@ -69,13 +68,54 @@
 
 .header-simple {
     background: #F5F5F5;
-    padding: 12px 12px 12px 0;
+    padding: 24px;
+    min-height: 110px;
 
     .header__logo {
-        width: 260px;
+        width: 200px;
     }
 
     .header__navigation li {
         list-style: none;
+    }
+
+    .header__navigation {
+        margin-top: 21px;
+        display: flex;
+        align-content: flex-end;
+
+        li {
+            a {
+                color: #505050;
+                font-weight: 600;
+            }
+        }
+
+        .cta {
+            display: flex;
+
+            @include resp-max($breakpoint-md) {
+                display: none;
+            }
+            
+            a {
+                border-radius: 200px;
+                padding: 8px 24px;
+                margin: 0 6px;
+            }
+
+            /* Buy giftcard cta */
+            &--giftcard {
+                //background: #fff;
+                border: 2px solid $primary-colour;
+                color: $primary-colour;
+            }
+            /* Book appointment cta */
+            &--book {
+                background: $primary-colour;
+                color: #F5F5F5;
+            }
+            
+        }
     }
 }

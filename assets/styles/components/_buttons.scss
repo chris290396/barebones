@@ -1,7 +1,9 @@
 .btn {
-    background-color: $brand-colour;
-    color: $base-background-colour;
+    background-color: $primary-colour;
+    font-weight: 600;
+    color: #fff;
     border: 1px solid transparent;
+    border-radius: 300px;
     display: inline-block;
     padding: #{$base-spacing-unit / 4} $base-spacing-unit;
     text-align: center;
@@ -11,7 +13,15 @@
     cursor: pointer;
     user-select: none;
     width: auto;
-    transition: all .5s;
+    transition: all $animation-speed;
+
+    a {
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        font-weight: 600;
+        text-decoration: none;
+    }
 
     &::-moz-focus-inner {
         border: 0;
@@ -20,9 +30,8 @@
 
     &:hover {
         text-decoration: none;
-        background-color: $base-background-colour;
-        color: $brand-colour;
-        border-color: $brand-colour;
+        background-color: darken($primary-colour, 12%);
+        color: #fff;
     }
 
     &.is-disabled,

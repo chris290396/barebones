@@ -23,7 +23,7 @@
 
         <div class="hero__bgimage">
             <header class="header" role="banner">
-                <div class="container">
+                <div class=""> <!-- .container -->
                     <a href="<?php echo get_bloginfo( 'url' ); ?>" class="header__logo col col--xs-6 col--sm-6 col--md-6 col--lg-6">
                         <?php echo is_front_page() ? '<h1>' : ''; ?>
                             <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" onerror="this.src='<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.png'" alt="<?php echo get_bloginfo( 'title' ); ?>" />
@@ -34,7 +34,7 @@
                         <span class="nav-burger__line"></span>
                         <span class="nav-burger__line"></span>
                     </a>
-                    <nav role="navigation" class="header__navigation col col--xs-6 col--sm-6 col--md-6 col--lg-6 alignright">
+                    <nav role="navigation" class="header__navigation alignright"> <!-- col col--xs-6 col--sm-6 col--md-6 col--lg-6 -->
                         <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header']); ?>
 
                         <ul class="cta">
@@ -48,8 +48,8 @@
         <?php } else { ?>
 
             <header class="header header-simple" role="banner">
-                <div class="container">
-                    <a href="<?php echo get_bloginfo( 'url' ); ?>" class="header__logo col col--xs-6 col--sm-6 col--md-6 col--lg-6">
+                <div class="">
+                    <a href="<?php echo get_bloginfo( 'url' ); ?>" class="header__logo col ">
                         <?php echo is_front_page() ? '<h1>' : ''; ?>
                             <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" onerror="this.src='<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.png'" alt="<?php echo get_bloginfo( 'title' ); ?>" />
                         <?php echo is_front_page() ? '</h1>' : ''; ?>
@@ -59,8 +59,13 @@
                         <span class="nav-burger__line"></span>
                         <span class="nav-burger__line"></span>
                     </a>
-                    <nav role="navigation" class="header__navigation col col--xs-6 col--sm-6 col--md-6 col--lg-6 alignright">
+                    <nav role="navigation" class="header__navigation alignright">
                         <?php wp_nav_menu(['theme_location' => 'header', 'menu_class' => 'nav nav--header alignright']); ?>
+
+                        <ul class="cta">
+                            <li><a class="cta--giftcard" href="#" title="Køb gavekort">Køb gavekort</a></li>
+                            <li><a class="cta--book"href="#" title="Book tid">Book tid</a></li>
+                        </ul>
                     </nav>
                 </div>
             </header>

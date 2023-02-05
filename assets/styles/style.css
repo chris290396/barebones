@@ -1179,6 +1179,15 @@ small {
   font-size: 0.75em;
 }
 
+.main {
+  padding: 50px 0;
+}
+.main .review_box {
+  background: #F5F5F5;
+  padding: 21px;
+  transform: translateY(-200px);
+}
+
 .hero__bgimage {
   background-image: url("../../img/bruuns-kropsterapi-hero-banner.jpg");
   background-repeat: no-repeat;
@@ -1186,7 +1195,7 @@ small {
   min-height: 75vh;
 }
 .hero__bgimage .header {
-  padding: 24px 12px 12px 0;
+  padding: 24px 38px 24px 48px;
 }
 .hero__bgimage .header .header__logo {
   width: 260px;
@@ -1203,7 +1212,6 @@ small {
 .hero__bgimage .header .header__navigation li a {
   color: #fff;
   font-weight: 600;
-  margin: 24px 12px;
 }
 .hero__bgimage .header .header__navigation .cta {
   display: flex;
@@ -1240,13 +1248,46 @@ small {
 
 .header-simple {
   background: #F5F5F5;
-  padding: 12px 12px 12px 0;
+  padding: 24px;
+  min-height: 110px;
 }
 .header-simple .header__logo {
-  width: 260px;
+  width: 200px;
 }
 .header-simple .header__navigation li {
   list-style: none;
+}
+.header-simple .header__navigation {
+  margin-top: 21px;
+  display: flex;
+  align-content: flex-end;
+}
+.header-simple .header__navigation li a {
+  color: #505050;
+  font-weight: 600;
+}
+.header-simple .header__navigation .cta {
+  display: flex;
+  /* Buy giftcard cta */
+  /* Book appointment cta */
+}
+@media screen and (max-width: 1024px) {
+  .header-simple .header__navigation .cta {
+    display: none;
+  }
+}
+.header-simple .header__navigation .cta a {
+  border-radius: 200px;
+  padding: 8px 24px;
+  margin: 0 6px;
+}
+.header-simple .header__navigation .cta--giftcard {
+  border: 2px solid #FC5827;
+  color: #FC5827;
+}
+.header-simple .header__navigation .cta--book {
+  background: #FC5827;
+  color: #F5F5F5;
 }
 
 .footer {
@@ -1287,9 +1328,11 @@ small {
 }
 
 .btn {
-  background-color: #444;
+  background-color: #FC5827;
+  font-weight: 600;
   color: #fff;
   border: 1px solid transparent;
+  border-radius: 300px;
   display: inline-block;
   padding: 6px 24px;
   text-align: center;
@@ -1302,7 +1345,14 @@ small {
       -ms-user-select: none;
           user-select: none;
   width: auto;
-  transition: all 0.5s;
+  transition: all 250ms;
+}
+.btn a {
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 600;
+  text-decoration: none;
 }
 .btn::-moz-focus-inner {
   border: 0;
@@ -1310,9 +1360,8 @@ small {
 }
 .btn:hover {
   text-decoration: none;
-  background-color: #fff;
-  color: #444;
-  border-color: #444;
+  background-color: #e33703;
+  color: #fff;
 }
 .btn.is-disabled, .btn:disabled {
   pointer-events: none;
